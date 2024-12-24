@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "0961b500-0a3b-4e44-971b-3789f8a4ecd5",
+		"name": "minio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "查看存储bucket是否存在",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/file/bucketExists?bucketName=boot-minio",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"file",
+						"bucketExists"
+					],
+					"query": [
+						{
+							"key": "bucketName",
+							"value": "boot-minio"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取全部bucket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/file/getAllBuckets",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"file",
+						"getAllBuckets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "图片/视频预览",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/file/preview?fileName=2024-12/24/3cfed5cc-308a-4f4e-a394-1cdbc31fcdc9.jpg",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"file",
+						"preview"
+					],
+					"query": [
+						{
+							"key": "fileName",
+							"value": "2024-12/24/3cfed5cc-308a-4f4e-a394-1cdbc31fcdc9.jpg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "文件下载",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/file/download?fileName=2024-12/24/3cfed5cc-308a-4f4e-a394-1cdbc31fcdc9.jpg",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"file",
+						"download"
+					],
+					"query": [
+						{
+							"key": "fileName",
+							"value": "2024-12/24/3cfed5cc-308a-4f4e-a394-1cdbc31fcdc9.jpg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "创建存储bucket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/file/makeBucket?bucketName=test-bucket",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"file",
+						"makeBucket"
+					],
+					"query": [
+						{
+							"key": "bucketName",
+							"value": "test-bucket"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "根据url地址删除文件",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/file/delete?url=2024-12/24/3cfed5cc-308a-4f4e-a394-1cdbc31fcdc9.jpg",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"file",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "2024-12/24/3cfed5cc-308a-4f4e-a394-1cdbc31fcdc9.jpg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "删除存储bucket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/file/removeBucket?bucketName=test-bucket",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"file",
+						"removeBucket"
+					],
+					"query": [
+						{
+							"key": "bucketName",
+							"value": "test-bucket"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "文件上传返回url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Administrator/Pictures/cda3c4f0-94df-4c77-bce9-e73007aba400.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/file/upload",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"file",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
